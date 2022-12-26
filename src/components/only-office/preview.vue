@@ -54,21 +54,27 @@ export default {
           key: option.key || '',
           title: option.title,
           permissions: {
-            edit: option.isEdit,//是否可以编辑: 只能查看，传false
+            //是否可以编辑: 只能查看，传false
+            edit: option.isEdit,
             print: option.isPrint,
             download: false,
-            // "fillForms": true,//是否可以填写表格，如果将mode参数设置为edit，则填写表单仅对文档编辑器可用。 默认值与edit或review参数的值一致。
-            // "review": true //跟踪变化
+            //是否可以填写表格，如果将mode参数设置为edit，则填写表单仅对文档编辑器可用。 默认值与edit或review参数的值一致。
+            // "fillForms": true,
+            //跟踪变化
+            // "review": true
           },
           url: option.url,
         },
         documentType: this.doctype,
         editorConfig: {
-          callbackUrl: option.editUrl,//"编辑word后保存时回调的地址，这个api需要自己写了，将编辑后的文件通过这个api保存到自己想要的位置
-          lang: option.lang,//语言设置
+          //"编辑word后保存时回调的地址，这个api需要自己写了，将编辑后的文件通过这个api保存到自己想要的位置
+          callbackUrl: option.editUrl,
+          //语言设置
+          lang: option.lang,
           //定制
           customization: {
-            autosave: false,//是否自动保存
+            //是否自动保存
+            autosave: false,
             chat: false,
             comments: false,
             help: false,
